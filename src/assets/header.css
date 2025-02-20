@@ -1,0 +1,25 @@
+.header {
+  background-color: #015fa9;
+}
+
+.select-option {
+  width: 140px;
+}
+.select-lang {
+  width: 120px;
+  height: 26px;
+}
+
+.option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-toolbar {
+  font-size: 12px;
+  color: white;
+  span {
+    margin: 0 4px;
+  }
+}
