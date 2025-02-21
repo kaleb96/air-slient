@@ -1,8 +1,11 @@
-import Workspace from "../pages/workspace";
+import Workspace from "../pages/Mypage.js";
 import Header from "../components/header";
 import Toolbar from "../components/toolbar";
 import ToolbarModal from "../components/toolbarModal";
 import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import routes from "../routes/index.js";
+
 function WorkspaceLayout() {
   const [selectedOption, setSelectedOption] = useState("");
   // NOTE: Functions
@@ -22,7 +25,17 @@ function WorkspaceLayout() {
       ) : (
         <></>
       )}
-      <Workspace props={selectedOption} />
+      <Router>
+        <Routes>
+          {routes.map((route, idx) => (
+            <Route
+              key={idx}
+              path={route.path}
+              element={<route.component props={selectedOption} />}
+            />
+          ))}
+        </Routes>
+      </Router>
     </div>
   );
 }
