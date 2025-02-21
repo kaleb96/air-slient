@@ -1,0 +1,16 @@
+.divider {
+  min-height: 50px;
+  height: auto;
+}
+
+.item {
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.item:hover {
+  text-decoration: underline;
+}
+.item-bold {
+  margin-bottom: 24px;
+}
