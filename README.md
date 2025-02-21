@@ -1,6 +1,6 @@
-# Workout 1
+# workout log #1
 
-## Memo
+## update log
 - apply react design by `ant-design`
 - make a application modularize
 - create `layout`, `header`, `toolbar` 
