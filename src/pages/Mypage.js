@@ -1,4 +1,4 @@
-function Workspace({ props }) {
+function Mypage({ props }) {
   const modalEffect = props !== "" ? true : false;
 
   return (
@@ -9,9 +9,9 @@ function Workspace({ props }) {
         opacity: modalEffect ? "0.9" : "",
       }}
     >
-      Hello World
+      Mypage
     </div>
   );
 }
 
-export default Workspace;
+export default Mypage;
