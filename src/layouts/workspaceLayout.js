@@ -14,8 +14,15 @@ function WorkspaceLayout() {
     <div>
       <Header />
       <Toolbar onSelectedOption={selectedToolbar} />
-      {selectedOption !== "" ? <ToolbarModal props={selectedOption} /> : null}
-      <Workspace />
+      {selectedOption !== "" ? (
+        <ToolbarModal
+          props={selectedOption}
+          onSelectedOption={selectedToolbar}
+        />
+      ) : (
+        <></>
+      )}
+      <Workspace props={selectedOption} />
     </div>
   );
 }

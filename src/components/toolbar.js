@@ -1,5 +1,6 @@
-import { Segmented, Flex, ConfigProvider } from "antd";
+import { Flex, Card, ConfigProvider } from "antd";
 import "../assets/toolbar.css";
+
 function Toolbar({ onSelectedOption }) {
   // NOTE: Variables
   const imgSrc = "/assets/air_slient.jpg";
@@ -12,33 +13,34 @@ function Toolbar({ onSelectedOption }) {
   ];
 
   // NOTE: Functions
-  function updateOpion(value) {
-    onSelectedOption(value);
+
+  function onMouseEnterToolbar(value) {
+    const el = value.target;
+    onSelectedOption(el.textContent);
   }
+
   return (
     <Flex align="center" justify="center" className="toolbar">
       <img src={imgSrc} style={{ width: "200px", height: "80px" }} />
       <ConfigProvider
         theme={{
           token: {
-            fontSize: "18px",
-            boxShadowTertiary: "0",
-            borderRadius: "0",
-            controlPaddingHorizontal: 42,
-          },
-          components: {
-            Segmented: {
-              itemSelectedBg: "rgba(0,0,0,0.15)",
-            },
+            lineType: 0,
           },
         }}
       >
-        <Segmented
-          options={options}
-          size="large"
-          className="segment"
-          onChange={updateOpion}
-        ></Segmented>
+        <Card>
+          {options.map((option) => (
+            <>
+              <span
+                className="toolbar-title"
+                onMouseEnter={onMouseEnterToolbar}
+              >
+                {option}
+              </span>
+            </>
+          ))}
+        </Card>
       </ConfigProvider>
     </Flex>
   );
