@@ -1,7 +1,6 @@
 import { Button, ConfigProvider, Flex, Input } from "antd";
 import "../assets/reserveInput.css";
 import Icon from "@mdi/react";
-import {} from "@mdi/js";
 
 function ReserveInput() {
   const reserveType = ["일반예약", "스탬프예약", "국내선 단체예약"];
@@ -44,9 +43,7 @@ function ReserveInput() {
           ))}
         </Flex>
         <Flex>
-          <Input>
-            <Icon path={mdilChevronDown} />
-          </Input>
+          <Input></Input>
         </Flex>
       </ConfigProvider>
     </>
