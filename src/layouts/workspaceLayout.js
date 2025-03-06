@@ -10,28 +10,24 @@ function WorkspaceLayout() {
   const [selectedOption, setSelectedOption] = useState("");
   // NOTE: Functions
   function selectedToolbar(value) {
-    console.log("toolbar = ", value);
     setSelectedOption(value);
   }
   return (
     <div>
       <Header />
       <Toolbar onSelectedOption={selectedToolbar} />
-      {selectedOption !== "" ? (
-        <ToolbarModal
-          props={selectedOption}
-          onSelectedOption={selectedToolbar}
-        />
-      ) : (
-        <></>
-      )}
       <Router>
         <Routes>
           {routes.map((route, idx) => (
             <Route
               key={idx}
               path={route.path}
-              element={<route.component props={selectedOption} />}
+              element={
+                <route.component
+                  props={selectedOption}
+                  onSelectedOption={selectedToolbar}
+                />
+              }
             />
           ))}
         </Routes>

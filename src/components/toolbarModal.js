@@ -3,6 +3,9 @@ import { Card, Flex, Divider, ConfigProvider } from "antd";
 import "../assets/toolbarModal.css";
 
 function ToolbarModal({ props, onSelectedOption }) {
+  if (!props) {
+    return;
+  }
   const modal = modalData[props];
 
   function onMounseLeaveModal(value) {
@@ -14,6 +17,7 @@ function ToolbarModal({ props, onSelectedOption }) {
         theme={{
           token: {
             lineType: 0,
+            borderRadius: 0,
           },
         }}
       >

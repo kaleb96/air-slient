@@ -5,7 +5,7 @@
 
 .item {
   cursor: pointer;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .item:hover {
@@ -13,4 +13,5 @@
 }
 .item-bold {
   margin-bottom: 24px;
+  font-size: 15px;
 }

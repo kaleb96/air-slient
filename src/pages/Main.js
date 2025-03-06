@@ -1,6 +1,9 @@
 import { Carousel, ConfigProvider } from "antd";
+import ToolbarModal from "../components/toolbarModal";
+import "../assets/main.css";
+import ReserveInput from "../components/reserveInput";
 
-function Main({ props }) {
+function Main({ props, onSelectedOption }) {
   const modalEffect = props !== "" ? true : false;
 
   const carouselList = [
@@ -8,12 +11,15 @@ function Main({ props }) {
     "/assets/carousel2.jpg",
     "/assets/carousel3.jpg",
   ];
+
+  function selectedToolbar(value) {
+    onSelectedOption(value);
+  }
   return (
     <div
       style={{
-        backgroundColor: modalEffect ? "grey" : "",
-        height: modalEffect ? "100vh" : "",
-        opacity: modalEffect ? "0.9" : "",
+        position: "relative",
+        height: "100vh",
       }}
     >
       <ConfigProvider
@@ -29,11 +35,15 @@ function Main({ props }) {
           },
         }}
       >
+        <div className="toolbar-modal">
+          <ToolbarModal props={props} onSelectedOption={selectedToolbar} />
+        </div>
         <Carousel arrows autoplay autoplaySpeed={5000}>
           {carouselList.map((img) => (
             <img src={img} height={650} />
           ))}
         </Carousel>
+        <ReserveInput />
       </ConfigProvider>
     </div>
   );
