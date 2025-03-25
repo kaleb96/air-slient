@@ -1,10 +1,10 @@
-import Workspace from "../pages/Mypage.js";
+import Workspace from "../pages/Mypage";
 import Header from "../components/header";
 import Toolbar from "../components/toolbar";
 import ToolbarModal from "../components/toolbarModal";
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import routes from "../routes/index.js";
+import routes from "../routes/index";
 
 function WorkspaceLayout() {
   const [selectedOption, setSelectedOption] = useState("");

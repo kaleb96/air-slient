@@ -2,6 +2,7 @@ import { Carousel, ConfigProvider } from "antd";
 import ToolbarModal from "../components/toolbarModal";
 import "../assets/main.css";
 import ReserveInput from "../components/reserveInput";
+import MainCanlendar from "../components/calendar";
 
 function Main({ props, onSelectedOption }) {
   const modalEffect = props !== "" ? true : false;
@@ -38,12 +39,15 @@ function Main({ props, onSelectedOption }) {
         <div className="toolbar-modal">
           <ToolbarModal props={props} onSelectedOption={selectedToolbar} />
         </div>
-        <Carousel arrows autoplay autoplaySpeed={5000}>
-          {carouselList.map((img) => (
-            <img src={img} height={650} />
-          ))}
-        </Carousel>
-        <ReserveInput />
+        <div className="carousel-input">
+          <Carousel arrows autoplay autoplaySpeed={5000}>
+            {carouselList.map((img) => (
+              <img src={img} height={650} />
+            ))}
+          </Carousel>
+          <ReserveInput />
+          <MainCanlendar />
+        </div>
       </ConfigProvider>
     </div>
   );
