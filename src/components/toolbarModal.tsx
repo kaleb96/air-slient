@@ -1,4 +1,4 @@
-import { modalData } from "../assets/toolbarModalData.ts";
+import { modalData } from "../assets/toolbarModalData";
 import { Card, Flex, Divider, ConfigProvider } from "antd";
 import "../assets/toolbarModal.css";
 
@@ -16,7 +16,7 @@ function ToolbarModal({ props, onSelectedOption }) {
       <ConfigProvider
         theme={{
           token: {
-            lineType: 0,
+            lineType: "0",
             borderRadius: 0,
           },
         }}
@@ -25,7 +25,7 @@ function ToolbarModal({ props, onSelectedOption }) {
           <Flex justify="center" gap={20} className="toolbar-box">
             {modal.map((data, idx) => (
               <>
-                <div key={{ idx }}>
+                <div key={idx}>
                   {data.map((item, subIdx) => (
                     <>
                       <Flex align="space-between">

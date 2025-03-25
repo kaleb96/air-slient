@@ -1,12 +1,13 @@
-import { Button, ConfigProvider, Flex, Input } from "antd";
+import { Button, ConfigProvider, Flex, Calendar } from "antd";
 import "../assets/reserveInput.css";
 import Icon from "@mdi/react";
 
 function ReserveInput() {
   const reserveType = ["일반예약", "스탬프예약", "국내선 단체예약"];
   const travelType = ["왕복", "편도", "자유여정"];
+
   return (
-    <>
+    <div className="reserve-input">
       <ConfigProvider
         theme={{
           token: {
@@ -42,11 +43,8 @@ function ReserveInput() {
             </Button>
           ))}
         </Flex>
-        <Flex>
-          <Input></Input>
-        </Flex>
       </ConfigProvider>
-    </>
+    </div>
   );
 }
 

@@ -1,0 +1,7 @@
+.selected-date {
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 1px;
+  width: 150px;
+  padding: 4px 0;
+}

@@ -25,7 +25,7 @@ function Toolbar({ onSelectedOption }) {
       <ConfigProvider
         theme={{
           token: {
-            lineType: 0,
+            lineType: "0",
           },
         }}
       >
