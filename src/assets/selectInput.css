@@ -1,0 +1,13 @@
+.select-box {
+  width: 270px;
+  background-color: white;
+  border-bottom: 1px solid grey;
+}
+
+.select-icon {
+  color: #1e409a;
+}
+
+.arrow-bottom {
+  cursor: pointer;
+}

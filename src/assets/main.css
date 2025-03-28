@@ -3,3 +3,9 @@
   width: 100%;
   z-index: 1;
 }
+
+.carousel-buttons {
+  position: absolute;
+  top: 49%;
+  left: 40%;
+}

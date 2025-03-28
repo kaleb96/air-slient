@@ -1,9 +1,7 @@
-import { Calendar, Flex, theme, Dropdown } from "antd";
+import { DatePicker, ConfigProvider } from "antd";
 import dayjs, { Dayjs } from "dayjs";
 import { useState, useEffect } from "react";
 import { getLocaleData } from "../assets/utils/dayjsConfig";
-import Icon from "@mdi/react";
-import { mdiCalendarMonth } from "@mdi/js";
 import "../assets/calendar.css";
 
 function MainCanlendar() {
@@ -19,35 +17,30 @@ function MainCanlendar() {
     setselectedToDate(localToday);
   }, []);
 
-  const { token } = theme.useToken();
-  const wrapperStyle: React.CSSProperties = {
-    width: 300,
-    border: `1px solid ${token.colorBorderSecondary}`,
-    borderRadius: token.borderRadiusLG,
+  const disabledDate = (current: Dayjs) => {
+    return current.isBefore(dayjs(), "day");
   };
-
-  function getSelectedDate(date: Dayjs) {
-    setselectedFromDate(getLocaleData(date));
-  }
+  const { RangePicker } = DatePicker;
 
   return (
-    <div style={wrapperStyle}>
-      <Flex align="center">
-        <div className="selected-date">
-          <Flex align="center">
-            <Icon path={mdiCalendarMonth} size={1} />
-            {selectedFromDate}
-          </Flex>
-        </div>
-        <span>~</span>
-        <div className="selected-date">{selectedToDate}</div>
-      </Flex>
-      <Calendar
-        fullscreen={false}
-        onChange={getSelectedDate}
-        defaultValue={dayjs()}
-      />
-    </div>
+    <>
+      <ConfigProvider
+        theme={{
+          token: {
+            fontSize: 14,
+          },
+        }}
+      >
+        <RangePicker
+          className="custom-range-picker"
+          picker="date"
+          defaultValue={[dayjs(), dayjs()]}
+          allowClear={false}
+          disabledDate={disabledDate}
+          getPopupContainer={(trigger) => trigger.parentElement}
+        />
+      </ConfigProvider>
+    </>
   );
 }
 
