@@ -5,6 +5,7 @@ import ToolbarModal from "../components/toolbarModal";
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import routes from "../routes/index";
+import Footer from "../components/footer";
 
 function WorkspaceLayout() {
   const [selectedOption, setSelectedOption] = useState("");
@@ -32,6 +33,7 @@ function WorkspaceLayout() {
           ))}
         </Routes>
       </Router>
+      <Footer />
     </div>
   );
 }

@@ -1,8 +1,9 @@
-import { Carousel, ConfigProvider } from "antd";
+import { Carousel, ConfigProvider, Flex } from "antd";
 import ToolbarModal from "../components/toolbarModal";
 import "../assets/main.css";
 import ReserveInput from "../components/reserveInput";
 import MainCanlendar from "../components/calendar";
+import SelectInput from "../components/selectInput";
 
 function Main({ props, onSelectedOption }) {
   const modalEffect = props !== "" ? true : false;
@@ -45,8 +46,13 @@ function Main({ props, onSelectedOption }) {
               <img src={img} height={650} />
             ))}
           </Carousel>
-          <ReserveInput />
-          <MainCanlendar />
+          <div className="carousel-buttons">
+            <ReserveInput />
+            <Flex>
+              <SelectInput />
+              <MainCanlendar />
+            </Flex>
+          </div>
         </div>
       </ConfigProvider>
     </div>

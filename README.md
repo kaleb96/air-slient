@@ -1,7 +1,16 @@
-# workout #5
+# workout #6
 
 # log
-- typescript 적용 `js` to `tsx`
-- `calendar` 임시 적용
-  
-<img src="https://github.com/user-attachments/assets/5451a4fa-f8ae-4977-a6ed-17b30d610c16" width="900"/>
+
+- `i18n` 데이터 생성 및 적용
+- `Calendar` RangePicker으로 변경 적용
+- `SelectInput` 생성 및 퍼블리싱(프론트 작업 필요)
+
+# todo
+
+- `SelectInput` 프론트 작업
+- `Card` 를 통해서 각 국가 모달형태로 나올 수 있도록 처리
+- `SelectInput`, `InputButtons`, `Calendar` 모두 합쳐서 컴포넌트화 필요
+- `Toolbar` 데이터 모두 `i18n` 적용 필요
+
+<img src="" width="900"/>
