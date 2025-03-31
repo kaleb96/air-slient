@@ -10,5 +10,5 @@
 
 # Page view
 
-<img src="" width="900"/>
-<img src="" width="900"/>
+<img src="https://github.com/user-attachments/assets/63fce38d-be77-4897-aa5f-5d83903e9060" width="900"/>
+<img src="https://github.com/user-attachments/assets/b99bda90-8785-44ec-a54b-89bf05132a4c" width="900"/>
