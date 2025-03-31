@@ -6,6 +6,27 @@
 
 .carousel-buttons {
   position: absolute;
-  top: 49%;
-  left: 40%;
+  top: 40%;
+  left: 24%;
+}
+
+.input-containner {
+  background-color: white;
+  width: 1000px;
+  height: 150px;
+  border-radius: 5px;
+  padding: 12px 36px;
+}
+.common-button {
+  height: 30px;
+  background-color: #1e409a;
+  color: white;
+  padding: 4px 16px 4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-flight {
+  margin-top: 16px;
+  margin-left: 16px;
 }

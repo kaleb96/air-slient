@@ -32,4 +32,9 @@ export default {
   bangkok: "Bangkok",
   bohol: "Bohol",
   denpasar: "Denpasar(Bali)",
+  personnel_adult: "Adult",
+  personnel_child: "Child",
+  personnel_infant: "Infant",
+  age_calculater: "Age calculator",
+  search_flight: "SEARCH",
 };
