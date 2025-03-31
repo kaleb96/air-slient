@@ -1,0 +1,25 @@
+.select-personnel-container {
+  width: 150px;
+  height: 40px;
+  padding: 4px;
+  display: flex;
+  justify-items: center;
+  border-bottom: 1px solid grey;
+}
+
+.personnel-icon {
+  color: #1e409a;
+}
+
+.arrow-container {
+  height: 16px;
+}
+.arrow-function {
+  height: 18px;
+  color: #1e409a;
+  cursor: pointer;
+}
+
+.personnel-text {
+  font-size: 20px;
+}

@@ -32,4 +32,9 @@ export default {
   bangkok: "방콕",
   bohol: "보홀",
   denpasar: "덴파사르(발리)",
+  personnel_adult: "성인",
+  personnel_child: "유아",
+  personnel_infant: "소아",
+  age_calculater: "나이계산기",
+  search_flight: "항공권 검색",
 };
